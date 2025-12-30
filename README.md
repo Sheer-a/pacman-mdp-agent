@@ -1,10 +1,10 @@
-# Pacman MDP Agent
+# 👾 Pacman MDP Agent
 
-Intelligenter Pacman-Agent basierend auf Markov Decision Process (MDP) für autonomes Spielen.
+Intelligenter Pacman-Agent basierend auf **Markov Decision Process (MDP)** für autonomes Spielen.
 
 Implementiert KI-Agenten für Pacman, Pacman VS und Wumpus World mit Value Iteration und MDP-Strategien.
 
-## Struktur
+## 📁 Struktur
 
 - `src/de/fh/ki/fin/mdp/` - MDP Implementation und Value Iteration
 - `src/de/fh/ki/fin/search/` - Suchalgorithmen (UCS)
@@ -13,13 +13,13 @@ Implementiert KI-Agenten für Pacman, Pacman VS und Wumpus World mit Value Itera
 - `data/pacmanvs/level/` - PvP Level
 - `data/wumpus/level/` - Wumpus World Level
 
-## Voraussetzungen
+## ⚙️ Voraussetzungen
 
 - Java 11+
 - JavaFX SDK
 - server.jar (wird von der Hochschule bereitgestellt, nicht im Repo enthalten)
 
-## Setup
+## 🚀 Setup
 
 1. **Repository klonen**
    ```bash
@@ -41,7 +41,7 @@ Implementiert KI-Agenten für Pacman, Pacman VS und Wumpus World mit Value Itera
    java -cp bin:server.jar de.fh.ki.fin.mdp.MDP_Runner
    ```
 
-## Funktionsweise
+## 🧠 Funktionsweise
 
 Der Agent nutzt **Value Iteration** um optimale Strategien zu berechnen:
 
@@ -53,7 +53,7 @@ newValue = (1-γ) * currentValue + γ * neighbourAverage + stepCost
 - Schrittkosten: -0.0001
 - Umgebung ist vollständig deterministisch
 
-## Level
+## 🎮 Level
 
 **Pacman:** dots_einfach, dots_mittel, dots_schwer, FHDO, raster_HR, raster_RR
 
@@ -61,7 +61,7 @@ newValue = (1-γ) * currentValue + γ * neighbourAverage + stepCost
 
 **Wumpus World:** WW_base_easy/moderate, WW_addon_easy/moderate/advanced, WW_large
 
-## Entwicklung
+## 🛠️ Entwicklung
 
 Neuen Agent erstellen:
 ```java
@@ -74,13 +74,13 @@ public class MyAgent extends PacmanAgent {
 
 Debugging mit `Logging.java` aktivieren.
 
-## Autoren
+## 👥 Autoren
 
-Gruppe 13 - Ghost Busters
+Gruppe 13 - KI-Kings
 - Sheer Ahmed
-- Kommilitone 1
-- Kommilitone 2
+- Abdulaziz Aldalati
+- Mohamed Chamharouch Aukili
 
-## Lizenz
+## 📝 Lizenz
 
 MIT License
