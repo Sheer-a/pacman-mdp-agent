@@ -78,8 +78,8 @@ Debugging mit `Logging.java` aktivieren.
 
 Gruppe 13 - KI-Kings
 - Sheer Ahmed
-- Abdulaziz Aldalati
-- Mohamed Chamharouch Aukili
+- Kommilitone 1
+- Kommilitone 2
 
 ## 📝 Lizenz
 
