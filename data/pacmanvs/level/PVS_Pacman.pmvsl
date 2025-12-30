@@ -1,0 +1,30 @@
+V3.0 20 22
+PVS_Pacman.pmvsl
+W W W W W W W W W W W W W W W W W W W W 
+W D D D D D D D D W W D D D D D D D D W 
+W E W W D W W W D W W D W W W D W W E W 
+W D W W D W W W D W W D W W W D W W D W 
+W D D D D D D D D D D D D D D D D D D W 
+W D W W D W D W W W W W W D W D W W D W 
+W D D D D W D D D W W D D D W D D D D W 
+W W W W D W W W D W W D W W W D W W W W 
+W E E E D W D D D D D D D D W D E E E W 
+W W W W D W D W E W W E W D W D W W W W 
+W E E E D D D W E W W E W D D D E E E W 
+W W W W D W D W W W W W W D W D W W W W 
+W E E E D W D D D D D D D D W D E E E W 
+W W W W D W D W W W W W W D W D W W W W 
+W D D D D D D D D W W D D D D D D D D W 
+W D W W D W W W D W W D W W W D W W D W 
+W E D W D D D D D D D D D D D D W D E W 
+W W D W D W D W W W W W W D W D W D W W 
+W D D D D W D D D W W D D D W D D D D W 
+W D W W W W W W D W W D W W W W W W D W 
+W D D D D D D D D D D D D D D D D D D W 
+W W W W W W W W W W W W W W W W W W W W 
+sp:1,8,SIMPLE_ATTACKER,direction:EAST
+sp:1,12,SIMPLE_DEFENDER,direction:EAST
+sp:8,10,SIMPLE_HUNTER,direction:EAST
+sp:11,10,SIMPLE_THIEF,direction:EAST
+sp:18,8,SIMPLE_HUNTER,direction:EAST
+sp:18,12,SIMPLE_HUNTER,direction:EAST

@@ -1,0 +1,19 @@
+V3.0 16 11
+PVS_Medium_02.pmvsl
+W W W W W W W W W W W W W W W W 
+W E E D D D D D D D D D D E E W 
+W E W D D D D D D D D D D W E W 
+W W W D D D D D D D D D D W W W 
+W W W W D D D D D D D D W W W W 
+W E E E D D D D D D D D E E E W 
+W W W W D D D D D D D D W W W W 
+W W W D D D D D D D D D D W W W 
+W E W D D D D D D D D D D W E W 
+W E E D D D D D D D D D D E E W 
+W W W W W W W W W W W W W W W W 
+sp:1,2,SIMPLE_ATTACKER,direction:EAST
+sp:1,5,SIMPLE_DEFENDER,direction:EAST
+sp:1,8,SIMPLE_HUNTER,direction:EAST
+sp:14,2,SIMPLE_HUNTER,direction:EAST
+sp:14,5,SIMPLE_DEFENDER,direction:EAST
+sp:14,8,SIMPLE_HUNTER,direction:EAST

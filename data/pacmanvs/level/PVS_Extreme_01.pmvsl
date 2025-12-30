@@ -1,0 +1,23 @@
+V3.0 16 15
+PVS_Extreme_01.pmvsl
+W W W W W W W W W W W W W W W W 
+W E E W D D D D D D D D W E E W 
+W E W W D W D W W D W D W W E W 
+W D D D D D D D D D D D D D D W 
+W D W W W W W D D W W W W W D W 
+W D D D D D D D D D D D D D D W 
+W W W W D W D W W D W D W W W W 
+W E E E D D D D D D D D E E E W 
+W W W W D W D W W D W D W W W W 
+W D D D D D D D D D D D D D D W 
+W D W W W W W D D W W W W W D W 
+W D D D D D D D D D D D D D D W 
+W E W W D W D W W D W D W W E W 
+W E E W D D D D D D D D W E E W 
+W W W W W W W W W W W W W W W W 
+sp:2,1,SIMPLE_DEFENDER,direction:EAST
+sp:1,7,SIMPLE_HUNTER,direction:EAST
+sp:2,13,SIMPLE_ATTACKER,direction:EAST
+sp:13,1,SIMPLE_THIEF,direction:EAST
+sp:14,7,SIMPLE_HUNTER,direction:EAST
+sp:13,13,SIMPLE_THIEF,direction:EAST

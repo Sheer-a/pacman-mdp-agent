@@ -1,0 +1,23 @@
+V3.0 16 15
+PVS_Medium_03.pmvsl
+W W W W W W W W W W W W W W W W 
+W W W W D D D D D D D D W W W W 
+W W W W D W W W W W W D W W W W 
+W D D D D D D D D D D D D D D W 
+W D W W W W D D D D W W W W D W 
+W D D D D D D D D D D D D D D W 
+W D W D W W W W W W W W D W D W 
+W D W D E E E W W E E E D W D W 
+W D W D W W W W W W W W D W D W 
+W D D D D D D D D D D D D D D W 
+W D W W W W D D D D W W W W D W 
+W D D D D D D D D D D D D D D W 
+W W W W D W W W W W W D W W W W 
+W W W W D D D D D D D D W W W W 
+W W W W W W W W W W W W W W W W 
+sp:4,7,SIMPLE_ATTACKER,direction:EAST
+sp:5,7,SIMPLE_HUNTER,direction:EAST
+sp:6,7,SIMPLE_DEFENDER,direction:EAST
+sp:9,7,SIMPLE_DEFENDER,direction:EAST
+sp:10,7,SIMPLE_HUNTER,direction:EAST
+sp:11,7,SIMPLE_THIEF,direction:EAST

@@ -1,0 +1,21 @@
+V3.0 22 13
+PVS_Hard_02.pmvsl
+W W W W W W W W W W W W W W W W W W W W W W 
+W W D D D D D D D D D D D D D D D D D D W W 
+W W D W D W W D W D W W D W D W W D W D W W 
+W E D W W D W D D D D D D D D W D W W D E W 
+W W D D D D D D W D D D D W D D D D D D W W 
+W W D W W W W D D D W W D D D W W W W D W W 
+W E D D D D D D W D D D D W D D D D D D E W 
+W W D W W W W D D D W W D D D W W W W D W W 
+W W D D D D D D W D D D D W D D D D D D W W 
+W E D W W D W D D D D D D D D W D W W D E W 
+W W D W D W W D W D W W D W D W W D W D W W 
+W W D D D D D D D D D D D D D D D D D D W W 
+W W W W W W W W W W W W W W W W W W W W W W 
+sp:1,3,SIMPLE_ATTACKER,direction:EAST
+sp:1,6,SIMPLE_HUNTER,direction:EAST
+sp:1,9,SIMPLE_DEFENDER,direction:EAST
+sp:20,3,SIMPLE_HUNTER,direction:EAST
+sp:20,6,SIMPLE_THIEF,direction:EAST
+sp:20,9,SIMPLE_ATTACKER,direction:EAST

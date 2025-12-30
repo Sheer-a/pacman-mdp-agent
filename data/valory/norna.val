@@ -1,0 +1,134 @@
+
+#-------------------------------------------------
+#-------------------startoff----------------------
+#-------------------------------------------------
+task startoffHunt {
+	target: ownHalf and enemy access: canWalk and not friend cost: 1
+}
+task startoffD {
+	target: ownHalf and dot and disttoenemy < 5 access: canWalk and not enemy and not friend cost: 1 distance: -disttoenemy,
+	target: ownHalf and dot and disttoenemy < 10 access: canWalk and not enemy and not friend cost: 1 distance: -disttoenemy,
+	target: ownHalf and dot and disttoenemy < 15 access: canWalk and not enemy and not friend cost: 1 distance: -disttoenemy,
+	target: ownHalf and dot and disttoenemy < 20 access: canWalk and not enemy and not friend cost: 1 distance: -disttoenemy,
+	target: ownHalf and dot and disttoenemy < 25 access: canWalk and not enemy and not friend cost: 1 distance: -disttoenemy,
+	target: ownHalf and dot and disttoenemy < 30 access: canWalk and not enemy and not friend cost: 1 distance: -disttoenemy
+}
+
+task startoffDefend {
+	#repeat target: ownHalf access: canWalk cost: 1 distance: disttoenemy*1000# if (dots("opp") - dots("own")) < 10
+	online join HIGH_PRIORITY {
+		startoffHunt(5),
+		startoffD(10)
+	} if (dots("opp") - dots("own")) > 10
+}
+task startoffAttack {
+	online join HIGH_PRIORITY {
+		target: not ownHalf and dot and safe(2) access: canWalk and not enemy cost: 1 distance: danger*5
+		if (time < timelimit/8) and (carrying <= dots("opp")/3),
+		# or ((dots(opp)/3 < 1) and carrying = 1)
+		
+		target: ownHalf access: canWalk and not enemy and not friend cost: 1 distance: danger*5
+	}
+}
+task startoff {
+	online join HIGH_PRIORITY {
+		startoffDefend(1),
+		startoffAttack(5)
+	} if time < timelimit/8
+}
+#-------------------------------------------------
+
+#-------------------------------------------------
+#-------------------skuld_tasks-------------------
+#-------------------------------------------------
+task balancedAttack {
+	target: not ownHalf and dot access: canWalk and not enemy cost: 1 distance: danger*5
+	if (dots("opp") < dots("own"))
+	#should be >= ?
+}
+task returnHome {
+	target: ownHalf access: canWalk and not enemy and not friend cost: 1 distance: danger*5
+	if (carrying > 0)
+}
+task steal {
+	target: not ownHalf and dot access: canWalk and not enemy cost: 1 distance: danger*5
+	if (carrying < 10)
+}
+#----------------------------------------------
+
+#-------------------------------------------------
+#-------------------verdandi_tasks----------------
+#-------------------------------------------------
+task hunt {
+	target: ownHalf and enemy access: canWalk and not friend cost: 1
+}
+task defend {
+	target: ownHalf and dot and disttoenemy < 5 access: canWalk and not enemy and not friend cost: 1 distance: -disttoenemy,
+	target: ownHalf and dot and disttoenemy < 10 access: canWalk and not enemy and not friend cost: 1 distance: -disttoenemy,
+	target: ownHalf and dot and disttoenemy < 15 access: canWalk and not enemy and not friend cost: 1 distance: -disttoenemy,
+	target: ownHalf and dot and disttoenemy < 20 access: canWalk and not enemy and not friend cost: 1 distance: -disttoenemy,
+	target: ownHalf and dot and disttoenemy < 25 access: canWalk and not enemy and not friend cost: 1 distance: -disttoenemy,
+	target: ownHalf and dot and disttoenemy < 30 access: canWalk and not enemy and not friend cost: 1 distance: -disttoenemy
+}
+#----------------------------------------------
+
+#-------------------------------------------------
+#-------------------urd_tasks--------------------
+#-------------------------------------------------
+task hunt {
+	target: ownHalf and enemy access: canWalk and not friend cost: 1
+}
+task tease {
+	online join HIGH_PRIORITY {
+		target: not ownHalf and (depth = 1) and disttoenemy > 1 access: canWalk and not enemy and not friend 
+			cost: 1 distance: danger*5*((time/10)+1),
+		
+		target: ownHalf access: canWalk and not enemy and not friend cost: 1
+	}
+}
+#----------------------------------------------
+
+bot skuld {
+	startoff,
+	
+	#1. eat dots until |oppDots| < |ownDots|
+	#else return home
+	online join HIGH_PRIORITY {
+		balancedAttack(5),
+		returnHome(10)
+	} if (time < (timelimit*3)/4),
+	
+	#2. eat up to 10 dots if 1/4 time remaining
+	#return home if eaten enough/no more remaining
+	online join HIGH_PRIORITY {
+		steal(5),
+		returnHome(10)
+	}
+}
+
+bot verdandi {
+	startoff,
+	
+	#1. walk to closest enemy (or isTargeted) if there's one on the own side
+	#2. walk to the own dot, that is closest to an enemy if there's no enemy on
+	#   the own side (distance: -disttoenemy)
+	online join HIGH_PRIORITY {
+		hunt(5),
+		defend(10)
+	}
+	
+}
+
+bot urd {
+	startoff,
+	
+	#1. walk to closest enemy if there's one on the own side
+	#2. go to own tile at min-/maxHeight
+	#3. go to depth 1.
+	#   wait until an enemy is close enough and repeat 2
+	online join HIGH_PRIORITY {
+		hunt(5),
+		tease(10)
+	}
+	
+}

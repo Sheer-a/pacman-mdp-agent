@@ -1,0 +1,23 @@
+# IDE-Konfiguration
+.classpath
+.project
+.settings/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+target/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

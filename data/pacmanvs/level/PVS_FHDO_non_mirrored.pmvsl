@@ -1,0 +1,27 @@
+V3.0 18 19
+PVS_FHDO_non_mirrored.pmvsl
+W W W W W W W W W W W W W W W W W W 
+W W W D D D D D W D D D D D D D W W 
+W W D D W W W D D D W W W W W D W W 
+W W D W E E E W D D D D W D W D W W 
+W W D D W W W D D W W D W D W D W W 
+W E D D D D D D W D D D D D D D E W 
+W W D D W W W D D D W W W W W D W W 
+W W D W E E E W D D D D W D D D W W 
+W W D W W W W W D D W W W W W D W W 
+W E D D D D D D D D D D D D D D E W 
+W W D W W W W W D D W W W W W D W W 
+W W D D D W D D D D W E E E W D W W 
+W W D W W W W W D D D W W W D D W W 
+W E D D D D D D D W D D D D D D E W 
+W W D W D W D W W D D W W W D D W W 
+W W D W D W D D D D W E E E W D W W 
+W W D W W W W W D D D W W W D D W W 
+W W D D D D D D D W D D D D D W W W 
+W W W W W W W W W W W W W W W W W W 
+sp:1,5,SIMPLE_HUNTER,direction:EAST
+sp:1,9,SIMPLE_HUNTER,direction:EAST
+sp:1,13,SIMPLE_DEFENDER,direction:EAST
+sp:16,5,SIMPLE_ATTACKER,direction:EAST
+sp:16,9,SIMPLE_DEFENDER,direction:EAST
+sp:16,13,SIMPLE_HUNTER,direction:EAST

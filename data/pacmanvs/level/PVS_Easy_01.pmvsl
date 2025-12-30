@@ -1,0 +1,23 @@
+V3.0 16 15
+PVS_Easy_01.pmvsl
+W W W W W W W W W W W W W W W W 
+W W W D D D D D D D D D D W W W 
+W E W D W D W W W W D W D W E W 
+W E E D W D W W W W D W D E E W 
+W W W D W D W W W W D W D W W W 
+W W W D D D D D D D D D D W W W 
+W W W D W D W D D W D W D W W W 
+W E E D W D D D D D D W D E E W 
+W W W D W D W D D W D W D W W W 
+W W W D D D D D D D D D D W W W 
+W W W D W D W W W W D W D W W W 
+W E E D W D W W W W D W D E E W 
+W E W D W D W W W W D W D W E W 
+W W W D D D D D D D D D D W W W 
+W W W W W W W W W W W W W W W W 
+sp:1,2,SIMPLE_DEFENDER,direction:EAST
+sp:1,7,SIMPLE_DEFENDER,direction:EAST
+sp:1,12,SIMPLE_ATTACKER,direction:EAST
+sp:14,2,SIMPLE_HUNTER,direction:EAST
+sp:14,7,SIMPLE_HUNTER,direction:EAST
+sp:14,12,SIMPLE_THIEF,direction:EAST
